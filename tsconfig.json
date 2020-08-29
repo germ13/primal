@@ -1,20 +1,18 @@
 {
     "compilerOptions": {
-        "target": "ES6",
-        "module": "ES2015",
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "sourceMap": true,
-        "outDir": "build/js"
-        ,"moduleResolution": "node"
-        ,"declaration": true
+      "target": "es6",
+      "module": "es6",
+      "moduleResolution": "node",
+      "declaration": false,
+      "noImplicitAny": false,
+      "sourceMap": true,
+      "jsx": "react",
+      "noLib": false,
+      "allowJs": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "baseUrl": "./src/"
     },
-    "include": [
-        "src/**/*"
-    ],
-    "exclude": [
-        "node_modules",
-        "**/*.spec.ts"
-    ]
-}
+    "include": ["./src/**/*"]
+  }

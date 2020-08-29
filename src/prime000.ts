@@ -1,11 +1,13 @@
-const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
+import {PRIMES} from "./primes"
+
+const primes = PRIMES;//[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
 const isPrime = (n: number) => primes.indexOf(n) > -1 ? true : false;
 
-type R2 = [number, number];
+export type R2 = [number, number];
 
-let divisions = 4;
+let divisions = 1;
 
-let direction_vector: R2[] = [[1, 0]];//, [0, 1], [-1, 0], [0, -1]];
+let direction_vector: R2[] = [[1, 0]];
 let roundoff = 1000000;
 for (let i = 1; i < divisions; i++) {
 
@@ -27,11 +29,13 @@ const rotate = (current_direction: R2, directions: R2[]): R2 => {
     return directions[new_index];
 }
 
-export default function getPath() {
-
+export function getPath() : R2[] {
     let cd: R2 = direction_vector[0];
     let position: R2 = [0, 0];
 
+    let result : R2[] = [];
+    result.push(position);
+    
     for (var i = 0; i <= Math.max.apply(Math, primes); i++) {
         if (isPrime(i)) {
             cd = rotate(cd, direction_vector);
@@ -39,8 +43,7 @@ export default function getPath() {
         } else {
             position = move(position, cd);
         }
-        console.log(i, position)
+        result.push(position);
     }
-
-    return position;
+    return result;
 }
