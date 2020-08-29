@@ -1,0 +1,18 @@
+{
+  "name": "zigzag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./src/prime000.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.61"
+  },
+  "dependencies": {
+    "d3": "^6.0.0"
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/d3.js" type="javascript"></script>
+
+</head>
+
+<body>
+<p>Lorem1</p>
+a
+<p>Lorem2</p>
+b
+<p>Lorem3</p>
+c
+<p>Lorem4</p>    
+<script src="build/js/prime000.js" type="javascript"></script>
+    <script>
+        var paragraphs = document.getElementsByTagName("p");
+        for (var i = 0; i < paragraphs.length; i++) {
+            var paragraph = paragraphs.item(i);
+            paragraph.style.setProperty("color", "blue", null);
+        }
+
+        var k = getPath();
+        console.log(k);
+    </script>
+</body>
+
+</html>
