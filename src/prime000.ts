@@ -1,11 +1,10 @@
-import {PRIMES} from "./primes"
+import {isPrime, PRIMES} from "./primes"
 
-const primes = PRIMES;//[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
-const isPrime = (n: number) => primes.indexOf(n) > -1 ? true : false;
+const primes = PRIMES;
 
 export type R2 = [number, number];
 
-let divisions = 1;
+let divisions = 5;
 
 let direction_vector: R2[] = [[1, 0]];
 let roundoff = 1000000;

@@ -1,3 +1,5 @@
+export const isPrime = (n: number) => PRIMES.indexOf(n) > -1 ? true : false;
+
 export const PRIMES : number[] = [
     2,
     3,
@@ -999,4 +1001,4 @@ export const PRIMES : number[] = [
     7901,
     7907,
     7919
-  ]
+  ];
